@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI 기반 SNS 마케팅으로 비즈니스 성장을 이끌어내는 전문 마케팅 회사">
+    <title>AI SNS 마케팅 전문회사</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header id="header" class="fixed w-full top-0 z-50 bg-dark backdrop-blur-md bg-opacity-90">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="logo">
+                <a href="#hero" class="text-2xl font-bold text-accent-1">AI Marketing</a>
+            </div>
+            <ul class="hidden md:flex space-x-8 nav-links">
+                <li><a href="#about" class="text-neutral-1 hover:text-accent-1 transition">소개</a></li>
+                <li><a href="#features" class="text-neutral-1 hover:text-accent-1 transition">서비스</a></li>
+                <li><a href="#portfolio" class="text-neutral-1 hover:text-accent-1 transition">성공사례</a></li>
+                <li><a href="#contact" class="text-neutral-1 hover:text-accent-1 transition">문의</a></li>
+            </ul>
+            <button id="mobile-menu-btn" class="md:hidden text-neutral-1 focus:outline-none" aria-label="모바일 메뉴 열기">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-dark border-t border-neutral-2">
+            <ul class="px-4 py-4 space-y-4">
+                <li><a href="#about" class="block text-neutral-1 hover:text-accent-1 transition">소개</a></li>
+                <li><a href="#features" class="block text-neutral-1 hover:text-accent-1 transition">서비스</a></li>
+                <li><a href="#portfolio" class="block text-neutral-1 hover:text-accent-1 transition">성공사례</a></li>
+                <li><a href="#contact" class="block text-neutral-1 hover:text-accent-1 transition">문의</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="min-h-screen flex items-center justify-center relative overflow-hidden">
+        <div class="hero-background"></div>
+        <div class="container mx-auto px-4 text-center relative z-10">
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-white">
+                AI로 만드는<br>
+                <span class="text-accent-1">혁신적인 마케팅</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-neutral-1 mb-8 max-w-2xl mx-auto">
+                최첨단 AI 기술로 소셜 미디어 마케팅의 새로운 지평을 엽니다
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#contact" class="btn-primary">무료 상담 받기</a>
+                <a href="#features" class="btn-secondary">서비스 알아보기</a>
+            </div>
+        </div>
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <svg class="w-6 h-6 text-neutral-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-dark">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">우리에 대해</h2>
+                <p class="text-lg text-neutral-1 mb-6 leading-relaxed">
+                    우리는 AI 기반의 데이터 분석과 최적화된 콘텐츠 전략으로 고객의 브랜드가 소셜 미디어에서 
+                    진정한 영향력을 발휘할 수 있도록 돕는 전문 마케팅 회사입니다.
+                </p>
+                <p class="text-lg text-neutral-1 leading-relaxed">
+                    인공지능 기술을 활용한 개인화된 마케팅 솔루션으로 고객 참여도를 극대화하고, 
+                    비즈니스 성장을 실현합니다.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-dark-section">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-white">우리의 서비스</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature Card 1 -->
+                <div class="feature-card">
+                    <div class="feature-icon mb-4">
+                        <svg class="w-12 h-12 text-accent-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">AI 콘텐츠 분석</h3>
+                    <p class="text-neutral-1">
+                        머신러닝 기반 콘텐츠 분석으로 최적의 게시 시점과 타겟 오디언스를 파악합니다.
+                    </p>
+                </div>
+
+                <!-- Feature Card 2 -->
+                <div class="feature-card">
+                    <div class="feature-icon mb-4">
+                        <svg class="w-12 h-12 text-accent-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">자동화 캠페인</h3>
+                    <p class="text-neutral-1">
+                        AI가 자동으로 최적화하는 광고 캠페인으로 효율적이고 효과적인 마케팅을 실현합니다.
+                    </p>
+                </div>
+
+                <!-- Feature Card 3 -->
+                <div class="feature-card">
+                    <div class="feature-icon mb-4">
+                        <svg class="w-12 h-12 text-accent-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">실시간 성과 분석</h3>
+                    <p class="text-neutral-1">
+                        실시간 대시보드를 통해 캠페인 성과를 모니터링하고 즉시 최적화합니다.
+                    </p>
+                </div>
+
+                <!-- Feature Card 4 -->
+                <div class="feature-card">
+                    <div class="feature-icon mb-4">
+                        <svg class="w-12 h-12 text-accent-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">타겟팅 최적화</h3>
+                    <p class="text-neutral-1">
+                        고급 AI 알고리즘으로 정확한 고객 세그멘테이션과 타겟팅을 제공합니다.
+                    </p>
+                </div>
+
+                <!-- Feature Card 5 -->
+                <div class="feature-card">
+                    <div class="feature-icon mb-4">
+                        <svg class="w-12 h-12 text-accent-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">크로스 플랫폼 관리</h3>
+                    <p class="text-neutral-1">
+                        인스타그램, 페이스북, 트위터 등 모든 소셜 미디어를 한 곳에서 관리합니다.
+                    </p>
+                </div>
+
+                <!-- Feature Card 6 -->
+                <div class="feature-card">
+                    <div class="feature-icon mb-4">
+                        <svg class="w-12 h-12 text-accent-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">ROI 최대화</h3>
+                    <p class="text-neutral-1">
+                        투자 대비 최고의 수익률을 보장하는 데이터 기반 마케팅 전략을 제공합니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-dark">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-white">성공 사례</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Portfolio Item 1 -->
+                <div class="portfolio-card">
+                    <div class="portfolio-image mb-4">
+                        <div class="w-full h-48 bg-gradient-to-br from-accent-1 to-accent-2 rounded-lg flex items-center justify-center">
+                            <span class="text-4xl">📈</span>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-white">패션 브랜드 A</h3>
+                    <p class="text-neutral-1 mb-3">
+                        AI 분석을 통한 타겟팅으로 팔로워 300% 증가, 매출 150% 성장
+                    </p>
+                    <span class="text-accent-1 font-semibold">+300% 팔로워 증가</span>
+                </div>
+
+                <!-- Portfolio Item 2 -->
+                <div class="portfolio-card">
+                    <div class="portfolio-image mb-4">
+                        <div class="w-full h-48 bg-gradient-to-br from-accent-2 to-neutral-2 rounded-lg flex items-center justify-center">
+                            <span class="text-4xl">🚀</span>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-white">테크 스타트업 B</h3>
+                    <p class="text-neutral-1 mb-3">
+                        자동화 캠페인으로 광고비 40% 절감, 전환율 200% 향상
+                    </p>
+                    <span class="text-accent-1 font-semibold">+200% 전환율</span>
+                </div>
+
+                <!-- Portfolio Item 3 -->
+                <div class="portfolio-card">
+                    <div class="portfolio-image mb-4">
+                        <div class="w-full h-48 bg-gradient-to-br from-neutral-2 to-accent-1 rounded-lg flex items-center justify-center">
+                            <span class="text-4xl">💼</span>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-white">B2B 서비스 C</h3>
+                    <p class="text-neutral-1 mb-3">
+                        크로스 플랫폼 전략으로 리드 생성 250% 증가, 브랜드 인지도 향상
+                    </p>
+                    <span class="text-accent-1 font-semibold">+250% 리드 생성</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-dark-section">
+        <div class="container mx-auto px-4">
+            <div class="max-w-2xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-white">문의하기</h2>
+                <form id="contact-form" class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-neutral-1 mb-2">이름</label>
+                        <input type="text" id="name" name="name" required
+                            class="w-full px-4 py-3 bg-dark border border-neutral-2 rounded-lg text-white focus:outline-none focus:border-accent-1 transition"
+                            aria-label="이름 입력">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-neutral-1 mb-2">이메일</label>
+                        <input type="email" id="email" name="email" required
+                            class="w-full px-4 py-3 bg-dark border border-neutral-2 rounded-lg text-white focus:outline-none focus:border-accent-1 transition"
+                            aria-label="이메일 입력">
+                    </div>
+                    <div>
+                        <label for="company" class="block text-neutral-1 mb-2">회사명 (선택)</label>
+                        <input type="text" id="company" name="company"
+                            class="w-full px-4 py-3 bg-dark border border-neutral-2 rounded-lg text-white focus:outline-none focus:border-accent-1 transition"
+                            aria-label="회사명 입력">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-neutral-1 mb-2">문의 내용</label>
+                        <textarea id="message" name="message" rows="5" required
+                            class="w-full px-4 py-3 bg-dark border border-neutral-2 rounded-lg text-white focus:outline-none focus:border-accent-1 transition resize-none"
+                            aria-label="문의 내용 입력"></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary w-full">문의하기</button>
+                </form>
+                <div class="mt-8 text-center">
+                    <p class="text-neutral-1 mb-4">또는 직접 연락주세요</p>
+                    <div class="space-y-2">
+                        <p class="text-accent-1">이메일: contact@aimarketing.com</p>
+                        <p class="text-accent-1">전화: 02-1234-5678</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark border-t border-neutral-2 py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p class="text-neutral-2 text-sm">© 2024 AI Marketing. All rights reserved.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-neutral-2 hover:text-accent-1 transition" aria-label="페이스북">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="text-neutral-2 hover:text-accent-1 transition" aria-label="인스타그램">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="text-neutral-2 hover:text-accent-1 transition" aria-label="트위터">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="mt-4 md:mt-0">
+                    <a href="#" class="text-neutral-2 hover:text-accent-1 transition text-sm">개인정보처리방침</a>
+                    <span class="text-neutral-2 mx-2">|</span>
+                    <a href="#" class="text-neutral-2 hover:text-accent-1 transition text-sm">이용약관</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
