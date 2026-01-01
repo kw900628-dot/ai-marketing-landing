@@ -1,0 +1,383 @@
+/* ============================================
+   색상 팔레트 (기획안 엄격 준수)
+   ============================================ */
+:root {
+    --color-bg-dark: #181C26;        /* 패션-1-hex: 메인 배경색 */
+    --color-accent-1: #D9D37E;       /* 패션-2-hex: 주요 버튼, 핵심 강조색 */
+    --color-accent-2: #A6995B;       /* 패션-3-hex: 서브 강조, 아이콘 */
+    --color-neutral-1: #BFB3A4;      /* 패션-4-hex: 보조 텍스트, 테두리 */
+    --color-neutral-2: #8C7161;      /* 패션-5-hex: 짙은 강조색, 푸터 텍스트 */
+}
+
+/* ============================================
+   기본 스타일 리셋 및 전역 설정
+   ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    background-color: var(--color-bg-dark);
+    color: var(--color-neutral-1);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* ============================================
+   Tailwind 커스텀 유틸리티 클래스
+   ============================================ */
+.bg-dark {
+    background-color: var(--color-bg-dark);
+}
+
+.bg-dark-section {
+    background-color: rgba(24, 28, 38, 0.8);
+}
+
+.text-accent-1 {
+    color: var(--color-accent-1);
+}
+
+.text-accent-2 {
+    color: var(--color-accent-2);
+}
+
+.text-neutral-1 {
+    color: var(--color-neutral-1);
+}
+
+.text-neutral-2 {
+    color: var(--color-neutral-2);
+}
+
+/* ============================================
+   버튼 스타일
+   ============================================ */
+.btn-primary {
+    display: inline-block;
+    padding: 0.875rem 2rem;
+    background-color: var(--color-accent-1);
+    color: var(--color-bg-dark);
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-accent-2);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(217, 211, 126, 0.3);
+}
+
+.btn-secondary {
+    display: inline-block;
+    padding: 0.875rem 2rem;
+    background-color: transparent;
+    color: var(--color-accent-1);
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    border: 2px solid var(--color-accent-1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-accent-1);
+    color: var(--color-bg-dark);
+    transform: translateY(-2px);
+}
+
+/* ============================================
+   헤더 스타일
+   ============================================ */
+header {
+    transition: all 0.3s ease;
+}
+
+header.scrolled {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+nav a {
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-accent-1);
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* 모바일 메뉴 애니메이션 */
+#mobile-menu {
+    transition: all 0.3s ease;
+    max-height: 0;
+    overflow: hidden;
+}
+
+#mobile-menu.active {
+    max-height: 500px;
+}
+
+/* ============================================
+   히어로 섹션 스타일
+   ============================================ */
+#hero {
+    position: relative;
+    background: linear-gradient(135deg, 
+        var(--color-bg-dark) 0%, 
+        rgba(217, 211, 126, 0.1) 50%, 
+        var(--color-bg-dark) 100%);
+    padding-top: 80px; /* 헤더 높이만큼 여백 */
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(217, 211, 126, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(166, 153, 91, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 40% 20%, rgba(140, 113, 97, 0.08) 0%, transparent 50%);
+    animation: pulse 8s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.8;
+    }
+}
+
+/* 스크롤 인디케이터 애니메이션 */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0) translateX(-50%);
+    }
+    50% {
+        transform: translateY(-10px) translateX(-50%);
+    }
+}
+
+.animate-bounce {
+    animation: bounce 2s infinite;
+}
+
+/* ============================================
+   기능 카드 스타일
+   ============================================ */
+.feature-card {
+    padding: 2rem;
+    background: rgba(24, 28, 38, 0.6);
+    border: 1px solid var(--color-neutral-2);
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--color-accent-1);
+    box-shadow: 0 15px 30px rgba(217, 211, 126, 0.2);
+    background: rgba(24, 28, 38, 0.9);
+}
+
+.feature-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    background: rgba(217, 211, 126, 0.1);
+    border-radius: 0.75rem;
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover .feature-icon {
+    background: rgba(217, 211, 126, 0.2);
+    transform: scale(1.1);
+}
+
+/* ============================================
+   포트폴리오 카드 스타일
+   ============================================ */
+.portfolio-card {
+    padding: 1.5rem;
+    background: rgba(24, 28, 38, 0.6);
+    border: 1px solid var(--color-neutral-2);
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-accent-1);
+    box-shadow: 0 10px 25px rgba(217, 211, 126, 0.15);
+}
+
+.portfolio-image {
+    overflow: hidden;
+    border-radius: 0.5rem;
+}
+
+.portfolio-image div {
+    transition: transform 0.3s ease;
+}
+
+.portfolio-card:hover .portfolio-image div {
+    transform: scale(1.05);
+}
+
+/* ============================================
+   폼 스타일
+   ============================================ */
+input[type="text"],
+input[type="email"],
+textarea {
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    box-shadow: 0 0 0 3px rgba(217, 211, 126, 0.1);
+}
+
+/* ============================================
+   반응형 디자인 (모바일 퍼스트)
+   ============================================ */
+
+/* 모바일 (기본) */
+@media (max-width: 640px) {
+    #hero h1 {
+        font-size: 2rem;
+    }
+
+    #hero p {
+        font-size: 1rem;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    section {
+        padding: 3rem 0;
+    }
+
+    .feature-card,
+    .portfolio-card {
+        padding: 1.5rem;
+    }
+}
+
+/* 태블릿 */
+@media (min-width: 641px) and (max-width: 1024px) {
+    #hero h1 {
+        font-size: 3.5rem;
+    }
+
+    .container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+/* 데스크톱 */
+@media (min-width: 1025px) {
+    #hero h1 {
+        font-size: 4.5rem;
+    }
+
+    .container {
+        max-width: 1200px;
+    }
+}
+
+/* ============================================
+   접근성 향상
+   ============================================ */
+/* 포커스 시각화 */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus {
+    outline: 2px solid var(--color-accent-1);
+    outline-offset: 2px;
+}
+
+/* 스킵 링크 (접근성) */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--color-accent-1);
+    color: var(--color-bg-dark);
+    padding: 8px;
+    text-decoration: none;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* ============================================
+   애니메이션 유틸리티
+   ============================================ */
+.fade-in {
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 스크롤 애니메이션 */
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.scroll-reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
